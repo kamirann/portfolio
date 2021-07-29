@@ -1,4 +1,5 @@
 import Hero from "./components/hero/Hero";
+import About from "./components/about/About";
 import { Globaly } from "./GlobalVariable";
 
 const App = () => {
@@ -6,7 +7,7 @@ const App = () => {
     <>
       <Globaly />
       <Hero />
-      <div style={{ height: "100vh" }}></div>
+      <About />
     </>
   );
 };
