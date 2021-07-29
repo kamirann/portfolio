@@ -1,16 +1,18 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import "./HeroStyles";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/src/all";
 
 const Hero = () => {
   gsap.registerPlugin(ScrollTrigger);
+  let containerRef = useRef(null);
   useEffect(() => {
     gsap.to(".div2, h1", {
       x: "0",
       duration: "5",
       scrollTrigger: {
-        trigger: ".hero-container",
+        trigger: containerRef.current,
+        // trigger: ".hero-container",
         start: "top top",
         scrub: true,
         pin: true,
@@ -21,7 +23,7 @@ const Hero = () => {
       opacity: "1",
       duration: "5",
       scrollTrigger: {
-        trigger: ".hero-container",
+        trigger: containerRef.current,
         start: "top top",
         scrub: true,
         pin: true,
@@ -33,6 +35,7 @@ const Hero = () => {
     <div
       style={{ width: "100vw", height: "100vh", position: "relative" }}
       className="hero-container"
+      ref={containerRef}
     >
       <div
         style={{
@@ -62,7 +65,7 @@ const Hero = () => {
             transform: "translateX(45%)",
           }}
         >
-          I'm Anny
+          I'm Amir
         </h1>
       </div>
       <div
@@ -97,7 +100,7 @@ const Hero = () => {
             opacity: "0",
           }}
         >
-          I'm Anny
+          I'm Amir
         </h1>
       </div>
     </div>

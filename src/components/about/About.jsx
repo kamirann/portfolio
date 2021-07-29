@@ -7,19 +7,20 @@ import {
   HeaderMed,
 } from "./AboutStyles.js";
 import gsap from "gsap";
+import { ScrollTrigger } from "gsap/src/all";
 
 const AboutStyles = () => {
   let ref = useRef(null);
+  gsap.registerPlugin(ScrollTrigger);
 
   useEffect(() => {
     gsap.to(ref.current, {
-      duration: 5,
-      keyframes: [{ y: "20px", x: "20px" }],
+      duration: 1,
+      y: "20px",
+      x: "20px",
       scrollTrigger: {
         trigger: ref.current,
-        start: "top top",
-        scrub: true,
-        // pin: true,
+        toggleActions: "play none none none",
       },
     });
   }, []);
