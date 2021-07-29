@@ -8,6 +8,7 @@ const App = () => {
       <Globaly />
       <Hero />
       <About />
+      <div style={{ height: "100vh" }}></div>
     </>
   );
 };
