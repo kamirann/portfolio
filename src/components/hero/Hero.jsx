@@ -6,31 +6,22 @@ import { ScrollTrigger } from "gsap/src/all";
 const Hero = () => {
   gsap.registerPlugin(ScrollTrigger);
   useEffect(() => {
-    gsap.to(".div2", {
-      duration: 0,
+    gsap.to(".div2, h1", {
       x: "0",
+      duration: "5",
       scrollTrigger: {
-        trigger: ".container",
-        start: "top top",
-        scrub: true,
-        pin: true,
-      },
-    });
-    gsap.to(".h1", {
-      duration: 0,
-      x: "0",
-      scrollTrigger: {
-        trigger: ".container",
+        trigger: ".hero-container",
         start: "top top",
         scrub: true,
         pin: true,
       },
     });
     gsap.to(".h2", {
-      duration: 0,
       x: "0",
+      opacity: "1",
+      duration: "5",
       scrollTrigger: {
-        trigger: ".container",
+        trigger: ".hero-container",
         start: "top top",
         scrub: true,
         pin: true,
@@ -40,8 +31,8 @@ const Hero = () => {
 
   return (
     <div
-      style={{ width: "100%", height: "100vh", position: "relative" }}
-      className="container"
+      style={{ width: "100vw", height: "100vh", position: "relative" }}
+      className="hero-container"
     >
       <div
         style={{
@@ -59,10 +50,19 @@ const Hero = () => {
           style={{
             fontSize: "200px",
             color: "black",
-            transform: "translateX(60vw)",
+            transform: "translateX(65%)",
           }}
         >
-          salam
+          Hello
+        </h1>
+        <h1
+          style={{
+            fontSize: "200px",
+            color: "black",
+            transform: "translateX(45%)",
+          }}
+        >
+          I'm Anny
         </h1>
       </div>
       <div
@@ -72,7 +72,7 @@ const Hero = () => {
           left: "0",
           top: "0",
           width: "100%",
-          transform: "translateX(-200%)",
+          transform: "translateX(-101%)",
           height: "100%",
           backgroundColor: "black",
         }}
@@ -82,10 +82,22 @@ const Hero = () => {
           style={{
             fontSize: "200px",
             color: "white",
-            transform: "translateX(100vw)",
+            transform: "translateX(166%)",
+            opacity: "0",
           }}
         >
-          salam
+          Hello
+        </h1>
+        <h1
+          className="h2"
+          style={{
+            fontSize: "200px",
+            color: "white",
+            transform: "translateX(146%)",
+            opacity: "0",
+          }}
+        >
+          I'm Anny
         </h1>
       </div>
     </div>

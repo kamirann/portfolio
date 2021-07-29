@@ -16,15 +16,15 @@ a {
   text-decoration: none;
 }
 
-.container {
+ .container {
   max-width: 84.4%;
   margin: 0 auto;
-}
+} 
 
 @media screen and (max-width: 1324px) {
   .container {
     max-width: 93%;
   }
-}
+} 
 
 `;

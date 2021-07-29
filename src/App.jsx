@@ -4,10 +4,9 @@ import { Globaly } from "./GlobalVariable";
 const App = () => {
   return (
     <>
-      {/* <Globaly> */}
+      <Globaly />
       <Hero />
       <div style={{ height: "100vh" }}></div>
-      {/* </Globaly> */}
     </>
   );
 };
