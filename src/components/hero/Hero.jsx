@@ -1,27 +1,34 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import "./HeroStyles";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/src/all";
 
 const Hero = () => {
+  let containerRef = useRef(null);
+  let div2Ref = useRef(null);
+  let firstH1Ref = useRef(null);
+  let secondH1Ref = useRef(null);
+  let firstH2Ref = useRef(null);
+  let secondH2Ref = useRef(null);
+
   gsap.registerPlugin(ScrollTrigger);
   useEffect(() => {
-    gsap.to(".div2, h1", {
+    gsap.to([div2Ref.current, firstH1Ref.current, secondH1Ref.current], {
       x: "0",
       duration: "5",
       scrollTrigger: {
-        trigger: ".hero-container",
+        trigger: containerRef.current,
         start: "top top",
         scrub: true,
         pin: true,
       },
     });
-    gsap.to(".h2", {
+    gsap.to([firstH2Ref.current, secondH2Ref.current], {
       x: "0",
       opacity: "1",
       duration: "5",
       scrollTrigger: {
-        trigger: ".hero-container",
+        trigger: containerRef.current,
         start: "top top",
         scrub: true,
         pin: true,
@@ -32,7 +39,7 @@ const Hero = () => {
   return (
     <div
       style={{ width: "100vw", height: "100vh", position: "relative" }}
-      className="hero-container"
+      ref={containerRef}
     >
       <div
         style={{
@@ -46,7 +53,7 @@ const Hero = () => {
         }}
       >
         <h1
-          className="h1"
+          ref={firstH1Ref}
           style={{
             fontSize: "200px",
             color: "black",
@@ -56,6 +63,7 @@ const Hero = () => {
           Hello
         </h1>
         <h1
+          ref={secondH1Ref}
           style={{
             fontSize: "200px",
             color: "black",
@@ -66,7 +74,7 @@ const Hero = () => {
         </h1>
       </div>
       <div
-        className="div2"
+        ref={div2Ref}
         style={{
           position: "absolute",
           left: "0",
@@ -78,7 +86,7 @@ const Hero = () => {
         }}
       >
         <h1
-          className="h2"
+          ref={firstH2Ref}
           style={{
             fontSize: "200px",
             color: "white",
@@ -89,7 +97,7 @@ const Hero = () => {
           Hello
         </h1>
         <h1
-          className="h2"
+          ref={secondH2Ref}
           style={{
             fontSize: "200px",
             color: "white",

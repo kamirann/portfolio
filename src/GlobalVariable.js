@@ -8,7 +8,7 @@ export const Globaly = createGlobalStyle`
 }
 
 body {
-  line-height: 1.5;
+  line-height: 1.4;
   background-color: #fff;
 }
 
