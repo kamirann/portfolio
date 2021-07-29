@@ -5,6 +5,7 @@ import {
   Content,
   HeaderSml,
   HeaderMed,
+  Paragraph,
 } from "./AboutStyles.js";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/src/all";
@@ -18,6 +19,15 @@ const AboutStyles = () => {
       duration: 1,
       y: "20px",
       x: "20px",
+      scrollTrigger: {
+        trigger: ref.current,
+        toggleActions: "play none none none",
+      },
+    });
+    gsap.to("h3,h2", {
+      duration: 2,
+      delay: 0.5,
+      rotateX: 0,
       scrollTrigger: {
         trigger: ref.current,
         toggleActions: "play none none none",
@@ -45,7 +55,7 @@ const AboutStyles = () => {
         <Content>
           <HeaderSml>About Me</HeaderSml>
           <HeaderMed>How We Became Contabile</HeaderMed>
-          <p>
+          <Paragraph>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
             recusandae ducimus cupiditate temporibus ipsa autem corrupti
             doloribus saepe quibusdam, aliquam illum quaerat officia architecto
@@ -53,7 +63,7 @@ const AboutStyles = () => {
             nostrum asperiores expedita nisi perferendis facilis, quis
             doloribus, veritatis cumque unde recusandae minima corporis? Cumque
             labore mollitia dolore?
-          </p>
+          </Paragraph>
         </Content>
       </FlexItems>
     </div>

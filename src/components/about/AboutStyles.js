@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import img from "./img/me.jpg";
 
-export const FlexItems = styled.div`
+export const FlexItems = styled.section`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   column-gap: 3rem;
@@ -48,9 +48,17 @@ export const HeaderSml = styled.h3`
   color: #e4a86d;
   margin-bottom: 20px;
   line-height: 1.7;
+  transform: rotateX(90deg);
 `;
 export const HeaderMed = styled.h2`
   font-size: 34px;
+  color: 000;
+  margin-bottom: 20px;
+  font-family: "Playfair Display", serif;
+  transform: rotateX(90deg);
+`;
+export const Paragraph = styled.p`
+  font-size: 18px;
   color: 000;
   margin-bottom: 20px;
   font-family: "Playfair Display", serif;
