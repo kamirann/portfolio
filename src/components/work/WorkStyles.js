@@ -52,7 +52,6 @@ export const Content = styled.div`
   height: 270px;
 
   border-radius: 50px;
-  /* margin-left: 20%; */
   z-index: 2;
   padding: 2rem;
   transform: translateX(${({ even }) => (even ? "50px" : "-50px")});
