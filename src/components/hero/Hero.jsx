@@ -103,6 +103,20 @@ const Hero = () => {
           I'm Amir
         </h1>
       </div>
+      <h1
+        className="h2"
+        style={{
+          fontSize: "28px",
+          color: "#000",
+          position: "absolute",
+          bottom: "80px",
+          left: "50px",
+          width: "35%",
+        }}
+      >
+        A passionate Frontend Web Developer having an experience of building Web
+        applications with JavaScript / Reactjs / Nodejs
+      </h1>
     </div>
   );
 };

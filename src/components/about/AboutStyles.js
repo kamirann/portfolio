@@ -27,17 +27,6 @@ export const Image = styled.div`
     height: 100%;
     width: 100%;
   }
-
-  /* &:before {
-    content: "";
-    position: absolute;
-    border: 10px solid #e4a86d;
-    left: 10px;
-    top: 10px;
-    height: 100%;
-    width: 100%;
-    z-index: -1;
-  } */
 `;
 
 export const Content = styled.div`
@@ -50,16 +39,11 @@ export const HeaderSml = styled.h3`
   line-height: 1.7;
   transform: rotateX(90deg);
 `;
-export const HeaderMed = styled.h2`
-  font-size: 34px;
-  color: 000;
-  margin-bottom: 20px;
-  font-family: "Playfair Display", serif;
-  transform: rotateX(90deg);
-`;
+
 export const Paragraph = styled.p`
-  font-size: 18px;
+  font-size: 20px;
   color: 000;
   margin-bottom: 20px;
   font-family: "Playfair Display", serif;
+  line-height: 1.7;
 `;

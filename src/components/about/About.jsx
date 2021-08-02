@@ -4,7 +4,6 @@ import {
   Image,
   Content,
   HeaderSml,
-  HeaderMed,
   Paragraph,
 } from "./AboutStyles.js";
 import gsap from "gsap";
@@ -54,15 +53,13 @@ const AboutStyles = () => {
         </Image>
         <Content>
           <HeaderSml>About Me</HeaderSml>
-          <HeaderMed>How We Became Contabile</HeaderMed>
           <Paragraph>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
-            recusandae ducimus cupiditate temporibus ipsa autem corrupti
-            doloribus saepe quibusdam, aliquam illum quaerat officia architecto
-            repellat esse eum consectetur repellendus culpa? Voluptatum a
-            nostrum asperiores expedita nisi perferendis facilis, quis
-            doloribus, veritatis cumque unde recusandae minima corporis? Cumque
-            labore mollitia dolore?
+            Hello! My name is Amir and i enjoy programming. i'm a self taugth
+            frontend developer who enjoy's solving problems. i start learning
+            web development in 2020 and ever since i've learnt HTML / Css /
+            Javascript / React / Redux / Nodejs / Mongodb and Wordpress. i'm a
+            good team player and i also have good eye for detailes, if you are
+            intrested you can see some of my works below.
           </Paragraph>
         </Content>
       </FlexItems>
